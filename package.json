@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "mongoose": "^7.5.0",
     "nodemon": "^3.0.1",
+    "razorpay": "^2.9.2",
     "ts-mongoose": "^0.0.24",
     "tsc-watch": "^6.0.4"
   }

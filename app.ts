@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { error } from "./middleware/errorMiddleWare";
-import todoRouter from "./router/todoRouter"
+import todoRouter from "./router/userRouter"
 import cookieParser from "cookie-parser"
 import cors from "cors";
 
@@ -29,7 +29,11 @@ app.use(cookieParser())
   
 
 
-  //**********************************REST API Routes**********************************/
+//**********************************REST API Routes**********************************/
+  
+app.get("/api/getkey", (req, res) =>
+  res.status(200).json({ key: process.env.RAZORPAY_API_KEY})
+);
 
  app.use("/api/v1",todoRouter)
 
