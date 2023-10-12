@@ -22,9 +22,6 @@ const crypto_1 = __importDefault(require("crypto"));
 const UserCreate = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { totalAmount } = req.body;
-        // if (!Name || !Contact || !Address) {
-        //   return next(new ErrorHandler("please enter all details", 401));
-        // }
         const options = {
             amount: Number(totalAmount) * 100,
             currency: "INR",

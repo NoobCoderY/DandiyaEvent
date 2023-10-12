@@ -15,9 +15,6 @@ export const UserCreate = async (
   try {
     const { totalAmount } = req.body;
 
-    // if (!Name || !Contact || !Address) {
-    //   return next(new ErrorHandler("please enter all details", 401));
-    // }
 
     const options = {
       amount: Number(totalAmount) * 100,
@@ -47,6 +44,7 @@ export const paymentVerification = async (
     razorpay_signature,
     userDetails,
   } = req.body;
+ 
 
   const body = razorpay_order_id + "|" + razorpay_payment_id;
 
